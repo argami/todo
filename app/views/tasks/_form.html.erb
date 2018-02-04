@@ -1,27 +1,23 @@
-<%= form_with(model: task, local: true) do |form| %>
+<%= form_with(model: task, local: true, class: "form-group") do |form| %>
   <% if task.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(task.errors.count, "error") %> prohibited this task from being saved:</h2>
-
-      <ul>
       <% task.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <%= content_tag(:div, message, class: "alert alert-danger") %>
       <% end %>
-      </ul>
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :title %>
-    <%= form.text_field :title, id: :task_title %>
+    <%= form.text_field :title, id: :task_title , class: "form-control"%>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :body %>
-    <%= form.text_area :body, id: :task_body %>
+    <%= form.text_area :body, id: :task_body, class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: "btn btn-primary" %>
   </div>
 <% end %>
