@@ -66,7 +66,11 @@ class TasksController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_task
-      @task = current_user.tasks.find(params[:id])
+      begin
+        @task = current_user.tasks.find(params[:id])
+      rescue
+        redirect_to tasks_url, notice: "Can't find the task." if @task.nil?
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
