@@ -35,6 +35,8 @@ gem 'bootstrap', '~> 4.0.0'
 gem 'octicons'
 gem 'octicons_helper'
 
+gem 'devise'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
