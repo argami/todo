@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is another TODO list. 
 
-Things you may want to cover:
+3 versions:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Basic no auth no bootstrap https://github.com/argami/todo/tree/basic
+- Basic with bootstrap https://github.com/argami/todo/tree/bootstrap
+- With auth master
